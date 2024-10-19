@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --image-width: 150px;
+    --image-height: 150px;
+    --picture-amount: 4;
+    --picture-whitespace: 25px;
+    --logos-width: calc((var(--picture-amount) * var(--picture-whitespace)) + (var(--image-width) * var(--picture-amount)));
+  }
+
+html {
+	scroll-behavior: smooth;
+}
+
+header {
+    background-image: url("../src/images/bg-velo-header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+.header-sm {
+    background-image: url("../src/images/bg-velo-header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center center;
+}
+
+.header-lg {
+    background-image: url("../src/images/bg-velo-header.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+header > div {
+    background-color: rgb(0, 0, 0, 65%);
+}
+
+/* @keyframes slide {
+    from {
+        transform: translateX(0);
+    } to {
+        transform: translateX(-103%); /* 100 on pc */
+    /* }  */
+/* } */
+
+#section-grad-1 /* Speisekarte */ {
+    background: rgb(0,115,0);
+    background: linear-gradient(180deg, rgba(0,115,0,1) 0%, rgba(79,115,79,1) 100%);
+}
+
+#section-grad-2 {
+    background: rgb(79,115,79);
+    background: linear-gradient(180deg, rgba(79,115,79,1) 0%, rgba(92,110,92,1) 100%);
+}
+
+#section-grad-3 {
+    background: rgb(81,104,81);
+    background: linear-gradient(180deg, rgba(81,104,81,1) 0%, rgba(56,65,56,1) 100%);
+}
+
+.logos {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+/* .logos:hover .logos-slide {
+    animation-play-state: paused;
+} */
+
+.logos-slide {
+    display: inline-block;
+    margin: 0 15px;
+    /* animation: 12s slide infinite linear; */
+}
+
+.logos-slide img {
+    display: inline-block;
+    margin: 0 40px; /* 50 on pc */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+.logos-slide img.active {
+    transform: scale(1.3); /* Adjust the scale as needed */
+    z-index: 1; /* Ensure the enlarged image appears above others */
+}
+
+.logos-slide img.near-active {
+    transform: scale(1.15); /* Slightly smaller scale for adjacent images */
+    z-index: 0; /* Keep them behind the center image */
+}
+
+
+::selection {
+    background-color: #FF822E;
+    color: white;
+}
+
+
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #EAE2D7;
+    border-bottom: 2px solid lightgray;
+    color: black;
+    box-shadow: 0px 5px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.nav-static {
+    position: static;
+    /* transition: 0.3s; */
+}
+
+.background-img-left {
+    display: inline-block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.background-img-right {
+    display: inline-block !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+}
+
+.half-width {
+    width: 50%;
+}
